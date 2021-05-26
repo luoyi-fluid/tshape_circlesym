@@ -1,0 +1,72 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7-1ff648926f77
+Exec   : surfaceFeatures
+Date   : May 25 2021
+Time   : 13:25:42
+Host   : "administrator"
+PID    : 3368
+I/O    : uncollated
+Case   : /home/luoyitian/openfoam/luoyi-7/run/tshape/t_shape_circlesym
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "t_circle_all.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 140
+Vertices     : 72
+Bounding Box : (-0.001193696982 -0.001119381981 0) (0.001174972043 0.00102375797 1.999999949e-05)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 24
+    feature edges  : 84
+    of which
+        region edges   : 0
+        external edges : 78
+        internal edges : 6
+
+
+Final feature set:
+points      : 72
+edges       : 84
+boundingBox : (-0.001193696982 -0.001119381981 0) (0.001174972043 0.00102375797 1.999999949e-05)
+point classification :
+    convex feature points          :       12
+    concave feature points         :        0
+    mixed feature points           :       12
+    other (non-feature) points     :       48
+edge classification :
+    external (convex angle) edges  :       78
+    internal (concave angle) edges :        6
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/home/luoyitian/openfoam/luoyi-7/run/tshape/t_shape_circlesym/constant/extendedFeatureEdgeMesh/t_circle_all.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/home/luoyitian/openfoam/luoyi-7/run/tshape/t_shape_circlesym/constant/triSurface/t_circle_all.eMesh"
+
+ExecutionTime = 0.04 s  ClockTime = 0 s
+
+End
+
